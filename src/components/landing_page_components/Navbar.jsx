@@ -32,12 +32,12 @@ const Navbar = () => {
                 : 'bg-transparent'
                 }`}
         >
-            <div className="flex justify-between items-center max-w-full px-[50px] pt-[50px] md:px-[50px] md:pt-[50px]">
+            <div className="flex justify-between items-center max-w-full px-3 pt-[50px] md:px-[50px] md:pt-[50px] pb-[50px]">
                 {/* Logo */}
                 <div className="navbar-logo">
                     <a
                         href="#home"
-                        className="font-glitten text-[30px] text-navbar-logo no-underline font-400"
+                        className="font-glitten text-[30px] md:pl-0 pl-1 text-navbar-logo no-underline font-400"
                     >
                         Infinity
                     </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
 
                 {/* Mobile Hamburger Menu */}
                 <div
-                    className="md:hidden flex flex-col cursor-pointer gap-[5px]"
+                    className="md:hidden flex flex-col cursor-pointer gap-[5px] pr-1"
                     onClick={toggleMobileMenu}
                 >
                     <span
@@ -107,60 +107,87 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             <div
-                className={`fixed top-0 w-[70%] h-screen bg-white/95 backdrop-blur-[10px] transition-all duration-300 pt-[100px] shadow-[-2px_0_10px_rgba(0,0,0,0.1)] ${isMobileMenuOpen ? 'right-0' : '-right-full'
+                className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[1100] flex flex-col items-center pt-16 px-4 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                     }`}
+                onClick={closeMobileMenu}
             >
-                <ul className="list-none p-0 m-0 flex flex-col gap-[30px] px-[30px]">
-                    <li>
-                        <a
-                            href="#home"
-                            className="text-[18px] text-navbar-text no-underline block py-[10px] transition-colors duration-300 hover:text-navbar-button"
-                            onClick={closeMobileMenu}
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#booking"
-                            className="text-[18px] text-navbar-text no-underline block py-[10px] transition-colors duration-300 hover:text-navbar-button"
-                            onClick={closeMobileMenu}
-                        >
-                            Booking
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#about"
-                            className="text-[18px] text-navbar-text no-underline block py-[10px] transition-colors duration-300 hover:text-navbar-button"
-                            onClick={closeMobileMenu}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#gallery"
-                            className="text-[18px] text-navbar-text no-underline block py-[10px] transition-colors duration-300 hover:text-navbar-button"
-                            onClick={closeMobileMenu}
-                        >
-                            Gallery
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="inline-block w-[126px] h-[36px] bg-navbar-button text-navbar-logo no-underline rounded-[5px] text-[18px] text-center leading-[36px] transition-colors duration-300 hover:bg-[#0088c2]"
-                            onClick={closeMobileMenu}
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
+                {/* Logo and Close Button Container */}
+                <div
+                    className={`bg-white w-full h-[56px] max-w-[400px] rounded-[20px] px-6 mb-4 flex items-center justify-between transform transition-all duration-300 ${isMobileMenuOpen ? 'scale-100 translate-y-0' : 'scale-95 -translate-y-10'
+                        }`}
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <div className="font-glitten text-[30px] text-black font-400 mx-auto pl-8">
+                        Infinity
+                    </div>
+                    <button
+                        onClick={closeMobileMenu}
+                        className="text-gray-500 hover:text-black transition-colors"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Menu Items Container */}
+                <div
+                    className={`bg-white w-full h-[356px] max-w-[400px] rounded-[20px] p-6 transform transition-all duration-300 ${isMobileMenuOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-10'
+                        }`}
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <ul className="list-none p-0 m-0 flex flex-col gap-4">
+                        <li>
+                            <a
+                                href="#home"
+                                className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
+                                onClick={closeMobileMenu}
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#booking"
+                                className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
+                                onClick={closeMobileMenu}
+                            >
+                                Booking
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#about"
+                                className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
+                                onClick={closeMobileMenu}
+                            >
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#gallery"
+                                className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
+                                onClick={closeMobileMenu}
+                            >
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#contact"
+                                className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
+                                onClick={closeMobileMenu}
+                            >
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 
