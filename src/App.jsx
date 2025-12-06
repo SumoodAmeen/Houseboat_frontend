@@ -6,6 +6,7 @@ import WhyUs from './components/landing_page_components/WhyUs'
 import OurHouseboats from './components/landing_page_components/OurHouseboats'
 import Badge from './components/landing_page_components/Badge'
 import StepInsideInfinite from './components/landing_page_components/StepInsideInfinite'
+import ContactUs from './components/landing_page_components/ContactUs'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <OurHouseboats />
             <Badge />
             <StepInsideInfinite />
+            <ContactUs />
         </>
     )
 }
