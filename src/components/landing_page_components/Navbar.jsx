@@ -32,7 +32,7 @@ const Navbar = () => {
                 : 'bg-transparent'
                 }`}
         >
-            <div className="flex justify-between items-center max-w-full px-3 pt-[50px] md:px-[50px] md:pt-[50px] pb-[50px]">
+            <div className="flex justify-between items-center max-w-full px-3 pt-[30px] md:px-[50px] md:pt-[50px] pb-[30px] md:pb-[50px]">
                 {/* Logo */}
                 <div className="navbar-logo">
                     <a
