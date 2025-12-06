@@ -4,18 +4,23 @@ import Hero from './components/landing_page_components/Hero'
 import AboutUs from './components/landing_page_components/AboutUs'
 import WhyUs from './components/landing_page_components/WhyUs'
 import OurHouseboats from './components/landing_page_components/OurHouseboats'
+import Badge from './components/landing_page_components/Badge'
+import StepInsideInfinite from './components/landing_page_components/StepInsideInfinite'
+
 
 function App() {
 
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <AboutUs />
-      <WhyUs />
-      <OurHouseboats />
-    </>
-  )
+    return (
+        <>
+            <Navbar />
+            <Hero />
+            <AboutUs />
+            <WhyUs />
+            <OurHouseboats />
+            <Badge />
+            <StepInsideInfinite />
+        </>
+    )
 }
 
 export default App
