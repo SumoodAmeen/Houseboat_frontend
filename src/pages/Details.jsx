@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Navbar from '../components/landing_page_components/Navbar'
 import BoatDetail from '../components/detail_page_components/BoatDetail'
 import Gallery from '../components/detail_page_components/Gallery'
+import Description from '../components/detail_page_components/Description'
+import ContactForm from '../components/detail_page_components/ContactForm'
 import ContactUs from '../components/landing_page_components/ContactUs'
 import Footer from '../components/landing_page_components/Footer'
 
@@ -12,6 +14,8 @@ function Details() {
             <Navbar />
             <BoatDetail />
             <Gallery />
+            <Description />
+            <ContactForm />
             <ContactUs />
             <Footer />
         </>
