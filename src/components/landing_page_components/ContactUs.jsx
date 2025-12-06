@@ -68,7 +68,7 @@ const ContactUs = () => {
                         {/* Form Container */}
                         <form
                             onSubmit={handleSubmit}
-                            className="w-[351px] md:w-[551px] h-[350px] md:h-[510px] bg-[#F5F5F5] rounded-[20px] p-6 md:p-8 flex flex-col gap-3 md:gap-4 mx-auto"
+                            className="w-[351px] md:w-[551px] h-[350px] md:h-[510px] bg-[#F2F2F2] rounded-[20px] p-6 md:p-8 flex flex-col gap-3 md:gap-4 mx-auto shadow-[0_8px_18px_rgba(0,159,224,0.15)]"
                         >
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ const ContactUs = () => {
                                 placeholder="Full Name"
                                 value={formData.fullName}
                                 onChange={handleChange}
-                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#00A8E8] bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
+                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#009FE0]/50 bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
                             />
                             <input
                                 type="email"
@@ -84,7 +84,7 @@ const ContactUs = () => {
                                 placeholder="E-mail"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#00A8E8] bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
+                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#009FE0]/50 bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
                             />
                             <input
                                 type="tel"
@@ -92,14 +92,14 @@ const ContactUs = () => {
                                 placeholder="Phone Number"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#00A8E8] bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
+                                className="w-full h-[40px] md:h-[50px] px-4 rounded-[10px] border border-[#009FE0]/50 bg-white text-[14px] md:text-[16px] focus:outline-none focus:border-[#0096d1]"
                             />
                             <textarea
                                 name="message"
                                 placeholder="Message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full flex-1 px-4 py-3 rounded-[10px] border border-[#00A8E8] bg-white text-[14px] md:text-[16px] resize-none focus:outline-none focus:border-[#0096d1]"
+                                className="w-full flex-1 px-4 py-3 rounded-[10px] border border-[#009FE0]/50 bg-white text-[14px] md:text-[16px] resize-none focus:outline-none focus:border-[#0096d1]"
                             />
                             <button
                                 type="submit"
@@ -112,11 +112,11 @@ const ContactUs = () => {
                         {/* Contact Info - Below Form */}
                         <div className="flex gap-6 md:gap-8 justify-center mt-6 md:mt-8">
                             <div className="flex items-center gap-2">
-                                <img src={callIcon} alt="Call" className="w-5 h-5 md:w-6 md:h-6" />
+                                <img src={callIcon} alt="Call" className="w-[15px] h-[14px] md:w-[15px] h-[14px]" />
                                 <span className="text-[14px] md:text-[18px] font-400 text-[#2D3542]">91 9887665xxx</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <img src={mailIcon} alt="Email" className="w-5 h-5 md:w-6 md:h-6" />
+                                <img src={mailIcon} alt="Email" className="w-[16px] h-[12px] md:w-[16px] h-[12px]" />
                                 <span className="text-[14px] md:text-[18px] font-400 text-[#2D3542]">Info@gmail.com</span>
                             </div>
                         </div>
