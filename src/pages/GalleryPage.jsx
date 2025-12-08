@@ -5,7 +5,7 @@ import Gallery from '../components/gallery_page_components/Gallery'
 import ContactUs from '../components/landing_page_components/ContactUs'
 import Footer from '../components/landing_page_components/Footer'
 
-function Details() {
+function GalleryPage() {
 
     return (
         <>
@@ -18,4 +18,4 @@ function Details() {
     )
 }
 
-export default Details
+export default GalleryPage

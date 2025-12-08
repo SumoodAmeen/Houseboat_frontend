@@ -5,6 +5,8 @@ import BookingPage from './pages/BookingPage'
 import Details from './pages/Details'
 import GalleryPage from './pages/GalleryPage'
 import AboutUsPage from './pages/AboutUsPage'
+import ContactUsPage from './pages/ContactUsPage'
+
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
                     <Route path="/details" element={<Details />} />
                     <Route path="/gallery" element={<GalleryPage />} />
                     <Route path="/about-us" element={<AboutUsPage />} />
+                    <Route path="/contact-us" element={<ContactUsPage />} />
                 </Routes>
             </Router>
         </>
