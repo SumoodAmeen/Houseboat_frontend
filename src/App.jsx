@@ -5,8 +5,8 @@ import BookingPage from './pages/BookingPage'
 import Details from './pages/Details'
 import GalleryPage from './pages/GalleryPage'
 import AboutUsPage from './pages/AboutUsPage'
+import ScrollToTop from './ScrollToTop'
 import ContactUsPage from './pages/ContactUsPage'
-
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     return (
         <>
             <Router>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/booking" element={<BookingPage />} />

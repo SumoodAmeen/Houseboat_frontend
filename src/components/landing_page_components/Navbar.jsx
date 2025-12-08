@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -35,55 +36,55 @@ const Navbar = () => {
             <div className="flex justify-between items-center max-w-full px-3 pt-[30px] md:px-[50px] md:pt-[50px] pb-[30px]">
                 {/* Logo */}
                 <div className="navbar-logo">
-                    <a
-                        href="#home"
+                    <Link
+                        to="/"
                         className="font-glitten text-[30px] md:pl-0 pl-1 text-navbar-logo no-underline font-400"
                     >
                         Infinity
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Desktop Navigation Links */}
                 <ul className="hidden md:flex list-none items-center gap-[50px] m-0 p-0">
                     <li>
-                        <a
-                            href="#home"
+                        <Link
+                            to="/"
                             className="text-[18px] text-navbar-text no-underline transition-colors font-400 duration-300 hover:text-navbar-button"
                         >
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#booking"
+                        <Link
+                            to="/booking"
                             className="text-[18px] text-navbar-text no-underline transition-colors font-400 duration-300 hover:text-navbar-button"
                         >
                             Booking
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#about"
+                        <Link
+                            to="/about-us"
                             className="text-[18px] text-navbar-text no-underline transition-colors font-400 duration-300 hover:text-navbar-button"
                         >
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#gallery"
+                        <Link
+                            to="/gallery"
                             className="text-[18px] text-navbar-text no-underline transition-colors font-400 duration-300 hover:text-navbar-button"
                         >
                             Gallery
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#contact"
+                        <Link
+                            to="/contact-us"
                             className="inline-block w-[126px] h-[36px] bg-navbar-button font-400 text-navbar-logo no-underline rounded-[5px] text-[18px] text-center leading-[36px] transition-colors duration-300 hover:bg-[#0088c2]"
                         >
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
@@ -140,49 +141,49 @@ const Navbar = () => {
                 >
                     <ul className="list-none p-0 m-0 flex flex-col gap-4">
                         <li>
-                            <a
-                                href="#home"
+                            <Link
+                                to="/"
                                 className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
                                 onClick={closeMobileMenu}
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#booking"
+                            <Link
+                                to="/booking"
                                 className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
                                 onClick={closeMobileMenu}
                             >
                                 Booking
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#about"
+                            <Link
+                                to="/about-us"
                                 className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
                                 onClick={closeMobileMenu}
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#gallery"
+                            <Link
+                                to="/gallery"
                                 className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
                                 onClick={closeMobileMenu}
                             >
                                 Gallery
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#contact"
+                            <Link
+                                to="/contact-us"
                                 className="block w-full h-[50px] py-3 bg-[#F5F5F5] rounded-[10px] text-center text-[16px] text-[#333] hover:bg-gray-200 transition-colors duration-300 no-underline"
                                 onClick={closeMobileMenu}
                             >
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

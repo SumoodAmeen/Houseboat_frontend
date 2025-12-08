@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import instaIcon from '../../assets/landing/insta.png';
 import facebookIcon from '../../assets/landing/facebook.png';
 import linkedinIcon from '../../assets/landing/lnkedin.png';
@@ -36,24 +37,24 @@ const Footer = () => {
                             </h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="#home" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
+                                    <Link to="/" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#bookings" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
+                                    <Link to="/booking" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
                                         Bookings
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#about" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
+                                    <Link to="/about-us" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
                                         About Us
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#gallery" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
+                                    <Link to="/gallery" className="text-[14px] md:text-[16px] font-400 text-[#2D3542] hover:text-[#00A8E8] transition-colors">
                                         Gallery
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
