@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import calendarIcon from '../../assets/landing/calendar.webp';
+import heroImg from '../../assets/landing/Hero_houseboat.webp';
 
 const Hero = () => {
     const [guests, setGuests] = useState(1);
@@ -34,7 +35,7 @@ const Hero = () => {
                 <div
                     className="absolute md:h-[90vh] h-[75vh] inset-0 bg-cover bg-no-repeat bg-[calc(8%_-_20px)_100%] md:bg-[center_calc(100%_+_35px)]"
                     style={{
-                        backgroundImage: "url('/src/assets/landing/Hero_houseboat.webp')",
+                        backgroundImage: `url(${heroImg})`,
                     }}
                 >
                     {/* Optional overlay for better text readability */}
