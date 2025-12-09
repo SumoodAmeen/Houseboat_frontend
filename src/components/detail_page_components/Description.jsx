@@ -1,15 +1,8 @@
 import React from 'react';
 import tickIcon from '../../assets/booking/tick.svg';
 
-const Description = () => {
-    const amenities = [
-        'High-Speed Wifi',
-        'Beddings',
-        'Work Desk',
-        'Air Conditioning',
-        'Charging Point',
-        'Body Soap'
-    ];
+const Description = ({ boat }) => {
+    const amenities = boat.amenities;
 
     // Mobile order is slightly different in the image (2 cols):
     // Wifi, AC
@@ -24,7 +17,7 @@ const Description = () => {
             <div className="max-w-[1440px] px-4 md:px-[50px]">
                 {/* Title */}
                 <h2 className="font-glitten text-[30px] md:text-[40px] text-[#2D3542] mb-2 md:mb-4 leading-tight">
-                    Alleppey Dulux<br className="md:hidden" /> Houseboat 1 Bedroom
+                    {boat.title}
                 </h2>
 
                 {/* Rating */}
@@ -43,7 +36,7 @@ const Description = () => {
 
                 {/* Description Text */}
                 <p className="text-[#2D3542] text-[14px] md:text-[16px] leading-[22px] md:leading-[28px] mb-8 md:mb-12 font-400 max-w-[100%] md:max-w-full">
-                    Lorem ipsum dolor sit amet consectetur. Imperdiet volutpat convallis dis ipsum proin integer interdum in donec. Convallis at sapien felis ipsum bibendum sagittis. Sed enim urna id hac. Integer accumsan diam et feugiat sed proin. Eu volutpat enim dignissim vivamus aliquet duis nullam. Et vehicula viverra felis facilisi enim
+                    {boat.longDescription}
                 </p>
 
                 {/* Amenities Section */}

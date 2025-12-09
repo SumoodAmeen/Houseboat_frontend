@@ -1,39 +1,10 @@
 import React from 'react';
-import boat1 from '../../assets/landing/boat1.webp';
-import boat2 from '../../assets/landing/boat2.webp';
-import boat3 from '../../assets/landing/boat3.png';
+import { useNavigate } from 'react-router-dom';
+import { houseboats } from '../../data/houseboats';
 import tickIcon from '../../assets/booking/tick.svg';
 
 const ForYou = () => {
-    const houseboats = [
-        {
-            id: 1,
-            image: boat1,
-            title: 'Alleppey Dulux Houseboat',
-            description: 'Lorem ipsum dolor sit amet consectetur',
-            rating: 5,
-            amenities: ['High-Speed Wifi', 'Food Facility', 'Shower', 'Air Conditioning'],
-            price: '2439',
-        },
-        {
-            id: 2,
-            image: boat2,
-            title: 'Alleppey Dulux Houseboat',
-            description: 'Lorem ipsum dolor sit amet consectetur',
-            rating: 5,
-            amenities: ['High-Speed Wifi', 'Food Facility', 'Shower', 'Air Conditioning'],
-            price: '2439',
-        },
-        {
-            id: 3,
-            image: boat3,
-            title: 'Alleppey Dulux Houseboat',
-            description: 'Lorem ipsum dolor sit amet consectetur',
-            rating: 5,
-            amenities: ['High-Speed Wifi', 'Food Facility', 'Shower', 'Air Conditioning'],
-            price: '2439',
-        },
-    ];
+    const navigate = useNavigate();
 
     return (
         <section className="w-full py-12 md:py-20 bg-white">
@@ -116,7 +87,9 @@ const ForYou = () => {
                                         </p>
                                     </div>
 
-                                    <button className="w-full md:w-[625px] h-[44px] md:h-[56px] bg-[#00A8E8] text-white rounded-[10px] text-[16px] md:text-[18px] font-400 hover:bg-[#0096d1] transition-colors pr-4">
+                                    <button
+                                        onClick={() => navigate(`/details/${boat.id}`)}
+                                        className="w-full md:w-[625px] h-[44px] md:h-[56px] bg-[#00A8E8] text-white rounded-[10px] text-[16px] md:text-[18px] font-400 hover:bg-[#0096d1] transition-colors pr-4">
                                         Book Now
                                     </button>
                                 </div>

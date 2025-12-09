@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import boatImage from '../../assets/landing/boat1.webp';
 
-const BoatDetail = () => {
+const BoatDetail = ({ boat }) => {
     return (
         <section className="w-full py-8 md:py-40 bg-white">
             <div className="max-w-full mx-auto px-4 md:pl-[50px] md:pr-[0px]">
@@ -10,8 +10,8 @@ const BoatDetail = () => {
                     {/* Mobile Image (Visible only on mobile) */}
                     <div className="md:hidden w-full flex justify-center mb-6">
                         <img
-                            src={boatImage}
-                            alt="Alleppey Dulux Houseboat"
+                            src={boat.image}
+                            alt={boat.title}
                             className="w-[353px] h-[322px] object-cover rounded-[20px]"
                         />
                     </div>
@@ -20,11 +20,11 @@ const BoatDetail = () => {
                     <div className="flex flex-col items-center md:items-start text-center md:text-left md:h-[630px] md:justify-end md:gap-10">
                         <div>
                             <h1 className="font-glitten text-[#2D3542] text-[30px] md:text-[40px] w-[298px] md:w-[749px] mb-4 md:mb-6 leading-tight">
-                                Alleppey Dulux Houseboat 1 Bedroom
+                                {boat.title}
                             </h1>
 
                             <p className="text-[#2D3542] text-[14px] md:text-[18px] w-[342px] md:w-[660px] leading-[22px] md:leading-[30px] mb-6 md:mb-0 font-400">
-                                Lorem ipsum dolor sit amet consectetur. Imperdiet volutpat convallis dis ipsum proin integer interdum in donec. Convallis at sapien felis ipsum bibendum sagittis. Sed enim urna id hac. Integer accumsan diam et feugiat sed proin. Lorem ipsum dolor sit amet consectetur. Imperdiet volutpat convallis dis ipsum proin integer interdum in donec. Convallis at sapien felis ipsum bibendum sagittis. Sed enim urna id hac. Integer accumsan diam et feugiat sed proin.
+                                {boat.longDescription}
                             </p>
                         </div>
 
@@ -44,8 +44,8 @@ const BoatDetail = () => {
                     {/* Desktop Image (Visible only on desktop) */}
                     <div className="hidden md:block">
                         <img
-                            src={boatImage}
-                            alt="Alleppey Dulux Houseboat"
+                            src={boat.image}
+                            alt={boat.title}
                             className="w-[974px] h-[700px] object-cover rounded-l-[20px] rounded-r-[0px]"
                         />
                     </div>
