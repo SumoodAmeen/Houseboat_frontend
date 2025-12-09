@@ -32,7 +32,7 @@ const Hero = () => {
     return (
         <>
             <style>{dateInputStyle}</style>
-            <section className="relative min-h-[108vh] w-full overflow-hidden">
+            <section className="relative min-h-[108vh] max-[380px]:min-h-[950px] w-full overflow-hidden">
                 {/* Background Image */}
                 <div
                     className="absolute md:h-[90vh] h-[75vh] inset-0 bg-cover bg-no-repeat bg-[calc(8%_-_20px)_100%] md:bg-[center_calc(100%_+_35px)]"
@@ -45,9 +45,9 @@ const Hero = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative z-10 pt-[130px] md:pt-[205px] px-3 md:px-0">
+                <div className="relative z-10 pt-[130px] max-[380px]:pt-[100px] px-3 md:px-0">
                     {/* Title */}
-                    <h1 className="font-glitten font-400 text-[33px] md:text-[60px] leading-[43px] md:leading-[80px] w-[371px] md:w-[924px] pl-1 md:pl-[50px] text-[#F5F5F5] md:text-[#0E1727]">
+                    <h1 className="font-glitten font-400 text-[33px] md:text-[60px] leading-[43px] md:leading-[80px] w-[371px] max-[380px]:w-full md:w-[924px] pl-1 md:pl-[50px] text-[#F5F5F5] md:text-[#0E1727]">
                         Experience an Authentic Homestay in{' '}
                         <span className="text-[#12BAFF] md:text-[#009FE0]">Kerala Backwaters.</span>
                     </h1>
@@ -66,17 +66,17 @@ const Hero = () => {
                 </div>
 
                 {/* Unified Booking Form - Responsive */}
-                <div className="absolute bottom-[100px] md:bottom-[100px] left-1/2 transform -translate-x-1/2 w-[291px] md:w-[922px] h-[347px] md:h-[143px] bg-[#F2F2F2]/95 rounded-[15px] shadow-2xl">
+                <div className="absolute bottom-[100px] max-[380px]:bottom-[270px] md:bottom-[100px] left-1/2 transform -translate-x-1/2 w-[291px] max-[380px]:w-[260px] md:w-[922px] h-[347px] max-[380px]:h-[300px] md:h-[143px] bg-[#F2F2F2]/95 rounded-[15px] shadow-2xl">
                     <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center justify-center md:justify-between h-full px-8 py-1 md:py-0 gap-4 md:gap-0">
                         {/* Guests */}
                         <div className="flex flex-col w-full md:w-auto">
-                            <label className="text-[14px] md:text-[16px] font-400 text-gray-700 mb-2">
+                            <label className="text-[14px] max-[380px]:text-[12px] md:text-[16px] font-400 text-gray-700 mb-2">
                                 Guests
                             </label>
                             <select
                                 value={guests}
                                 onChange={(e) => setGuests(e.target.value)}
-                                className="w-[222px] md:w-[204px] h-[44px] md:h-[51px] border border-gray-300 rounded-[10px] px-4 text-gray-700 focus:outline-none focus:border-[#00A8E8] cursor-pointer mx-auto md:mx-0 bg-white"
+                                className="w-[222px] max-[380px]:w-[200px] md:w-[204px] h-[44px] max-[380px]:h-[38px] md:h-[51px] border border-gray-300 rounded-[10px] px-4 text-gray-700 focus:outline-none focus:border-[#00A8E8] cursor-pointer mx-auto md:mx-0 bg-white"
                             >
                                 {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                                     <option key={num} value={num}>
@@ -88,7 +88,7 @@ const Hero = () => {
 
                         {/* Check In */}
                         <div className="flex flex-col w-full md:w-auto relative">
-                            <label className="text-[14px] md:text-[16px] font-400 text-gray-700 mb-2">
+                            <label className="text-[14px] max-[380px]:text-[12px] md:text-[16px] font-400 text-gray-700 mb-2">
                                 Check In
                             </label>
                             <div className="relative mx-auto md:mx-0">
@@ -98,7 +98,7 @@ const Hero = () => {
                                     value={checkIn}
                                     onChange={(e) => setCheckIn(e.target.value)}
                                     placeholder="DD/MM/YYYY"
-                                    className="w-[222px] md:w-[204px] h-[44px] md:h-[51px] border border-gray-300 rounded-[10px] pl-4 pr-10 text-gray-700 focus:outline-none focus:border-[#00A8E8] bg-white"
+                                    className="w-[222px] max-[380px]:w-[200px] md:w-[204px] h-[44px] max-[380px]:h-[38px] md:h-[51px] border border-gray-300 rounded-[10px] pl-4 pr-10 text-gray-700 focus:outline-none focus:border-[#00A8E8] bg-white"
                                     style={{
                                         backgroundImage: `url(${calendarIcon})`,
                                         backgroundRepeat: 'no-repeat',
@@ -115,7 +115,7 @@ const Hero = () => {
 
                         {/* Check Out */}
                         <div className="flex flex-col w-full md:w-auto relative">
-                            <label className="text-[14px] md:text-[16px] font-400 text-gray-700 mb-2">
+                            <label className="text-[14px] max-[380px]:text-[12px] md:text-[16px] font-400 text-gray-700 mb-2">
                                 Check Out
                             </label>
                             <div className="relative mx-auto md:mx-0">
@@ -125,7 +125,7 @@ const Hero = () => {
                                     value={checkOut}
                                     onChange={(e) => setCheckOut(e.target.value)}
                                     placeholder="DD/MM/YYYY"
-                                    className="w-[222px] md:w-[204px] h-[44px] md:h-[51px] border border-gray-300 rounded-[10px] pl-4 pr-10 text-gray-700 focus:outline-none focus:border-[#00A8E8] bg-white"
+                                    className="w-[222px] max-[380px]:w-[200px] md:w-[204px] h-[44px] max-[380px]:h-[38px] md:h-[51px] border border-gray-300 rounded-[10px] pl-4 pr-10 text-gray-700 focus:outline-none focus:border-[#00A8E8] bg-white"
                                     style={{
                                         backgroundImage: `url(${calendarIcon})`,
                                         backgroundRepeat: 'no-repeat',
@@ -143,7 +143,7 @@ const Hero = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-[222px] md:w-[194px] h-[44px] md:h-[51px] bg-[#00A8E8] text-white rounded-[10px] font-400 text-[14px] md:text-[16px] hover:bg-[#0088c2] transition-colors duration-300 md:mt-6"
+                            className="w-[222px] max-[380px]:w-[200px] md:w-[194px] h-[44px] max-[380px]:h-[38px] md:h-[51px] bg-[#00A8E8] text-white rounded-[10px] font-400 text-[14px] max-[380px]:text-[12px] md:text-[16px] hover:bg-[#0088c2] transition-colors duration-300 md:mt-6"
                         >
                             Check Availability
                         </button>
