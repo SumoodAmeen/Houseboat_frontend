@@ -116,7 +116,7 @@ const ForYou = () => {
                                         </p>
                                     </div>
 
-                                    <button className="w-[333px] md:w-[625px] h-[44px] md:h-[56px] bg-[#00A8E8] text-white rounded-[10px] text-[16px] md:text-[18px] font-400 hover:bg-[#0096d1] transition-colors pr-4">
+                                    <button className="w-full md:w-[625px] h-[44px] md:h-[56px] bg-[#00A8E8] text-white rounded-[10px] text-[16px] md:text-[18px] font-400 hover:bg-[#0096d1] transition-colors pr-4">
                                         Book Now
                                     </button>
                                 </div>
