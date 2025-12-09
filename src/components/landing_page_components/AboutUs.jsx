@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import aboutUsImage from '../../assets/landing/about_us_image.webp';
 
 const AboutUs = () => {
+    const navigate = useNavigate();
     return (
         <section id="about" className="w-full py-0 md:pb-0 md:py-10">
             <div className="max-w-[1740px] pb-3 mx-auto px-4 md:px-0">
@@ -18,7 +20,9 @@ const AboutUs = () => {
                         alt="Houseboat on water"
                         className="w-[353px] h-[203px] rounded-[20px] object-cover mb-6"
                     />
-                    <button className="w-[124px] h-[35px] bg-[#009FE0] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
+                    <button
+                        onClick={() => navigate('/about-us')}
+                        className="w-[124px] h-[35px] bg-[#009FE0] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
                         Know More
                     </button>
                 </div>
@@ -35,7 +39,9 @@ const AboutUs = () => {
                             Leo congue dictum tortor dui ac adipiscing aenean dignissim enim. Vitae habitasse sit ipsum habitant placerat dignissim. Tincidunt vitae fringilla vel nunc. Eget at vitae sed parturient ultrices diam mauris sit aliquam. Velit sagittis sed scelerisque ultrices. Suscipit euismod sem sed quam laoreet dolor sit bibendum sed.
                             Pellentesque fermentum accumsan quis a volutpat imperdiet sed.
                         </p>
-                        <button className="w-[163px] h-[43px] bg-[#009FE0] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
+                        <button
+                            onClick={() => navigate('/about-us')}
+                            className="w-[163px] h-[43px] bg-[#009FE0] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
                             Explore Now
                         </button>
                     </div>

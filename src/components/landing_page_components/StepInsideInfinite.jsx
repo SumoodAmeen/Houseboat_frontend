@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import step1 from '../../assets/landing/step1.webp';
 import step2 from '../../assets/landing/step2.webp';
 import step3 from '../../assets/landing/step3.webp';
 import step4 from '../../assets/landing/step4.webp';
 
 const StepInsideInfinite = () => {
+    const navigate = useNavigate();
     return (
         <section className="w-full py-12 md:py-20 bg-white">
             <div className="max-w-[1440px] mx-auto px-4">
@@ -25,7 +27,9 @@ const StepInsideInfinite = () => {
                             Lorem ipsum dolor sit amet consectetur. Imperdiet volutpat convallis dis ipsum proin integer interdum in donec. Convallis at sapien felis ipsum bibendum sagittis. Sed enim urna id hac. Integer accumsan diam et feugiat sed proin. Eu volutpat enim dignissim vivamus aliquet duis nullam. Et vehicula viverra felis facilisi enim
                         </p>
                         {/* Desktop Button - Hidden on mobile */}
-                        <button className="hidden md:block w-[163px] h-[43px] bg-[#00A8E8] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0096d1] transition-colors">
+                        <button
+                            onClick={() => navigate('/gallery')}
+                            className="hidden md:block w-[163px] h-[43px] bg-[#00A8E8] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0096d1] transition-colors">
                             See All
                         </button>
                     </div>
@@ -59,7 +63,9 @@ const StepInsideInfinite = () => {
                         </div>
 
                         {/* Mobile Button - Only visible on mobile, below images */}
-                        <button className="md:hidden w-[124px] h-[35px] bg-[#00A8E8] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0096d1] transition-colors mx-auto">
+                        <button
+                            onClick={() => navigate('/gallery')}
+                            className="md:hidden w-[124px] h-[35px] bg-[#00A8E8] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0096d1] transition-colors mx-auto">
                             See All
                         </button>
                     </div>

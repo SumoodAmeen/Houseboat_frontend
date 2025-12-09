@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import calendarIcon from '../../assets/landing/calendar.webp';
 import heroImg from '../../assets/landing/Hero_houseboat.webp';
 
 const Hero = () => {
     const [guests, setGuests] = useState(1);
+    const navigate = useNavigate();
     const [checkIn, setCheckIn] = useState('');
     const [checkOut, setCheckOut] = useState('');
     const checkInRef = useRef(null);
@@ -56,7 +58,9 @@ const Hero = () => {
                     </p>
 
                     {/* Button */}
-                    <button className="w-[134px] md:w-[163px] h-[35px] md:h-[43px] bg-[#009FE0] text-white rounded-[6px] md:rounded-[10px] ml-1 md:ml-[50px] mt-6 font-400 text-[14px] md:text-[16px] hover:bg-[#0088c2] transition-colors duration-300">
+                    <button
+                        onClick={() => navigate('/booking')}
+                        className="w-[134px] md:w-[163px] h-[35px] md:h-[43px] bg-[#009FE0] text-white rounded-[6px] md:rounded-[10px] ml-1 md:ml-[50px] mt-6 font-400 text-[14px] md:text-[16px] hover:bg-[#0088c2] transition-colors duration-300">
                         Explore Now
                     </button>
                 </div>
