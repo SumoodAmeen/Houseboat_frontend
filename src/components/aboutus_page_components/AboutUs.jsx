@@ -22,7 +22,7 @@ const AboutUs = () => {
                 </p>
 
                 {/* Images Row */}
-                <div className="w-full h-[200px] md:h-[400px] rounded-[20px] overflow-hidden flex">
+                <div className="w-full h-[126px] md:h-[377px] rounded-[20px] overflow-hidden flex">
                     <div className="w-1/3 h-full">
                         <img
                             src={bookingHero}
