@@ -36,30 +36,34 @@ const StepInsideInfinite = () => {
 
                     {/* Right Side - 2x2 Image Grid */}
                     <div className="flex flex-col gap-4 md:gap-0">
-                        <div className="flex flex-wrap gap-2 md:gap-6 justify-center md:justify-start">
+                        <div className="w-[353px] md:w-auto flex flex-col gap-2 md:gap-6 mx-auto md:mx-0">
                             {/* Row 1 */}
-                            <img
-                                src={step1}
-                                alt="Step Inside Infinity 1"
-                                className="w-[221px] h-[118px] md:w-[580px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover"
-                            />
-                            <img
-                                src={step2}
-                                alt="Step Inside Infinity 2"
-                                className="w-[124px] h-[118px] md:w-[327px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover"
-                            />
+                            <div className="flex gap-2 md:gap-6">
+                                <img
+                                    src={step1}
+                                    alt="Step Inside Infinity 1"
+                                    className="w-[221px] h-[118px] md:w-[580px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover flex-shrink-0"
+                                />
+                                <img
+                                    src={step2}
+                                    alt="Step Inside Infinity 2"
+                                    className="w-[124px] h-[118px] md:w-[327px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover flex-shrink-0"
+                                />
+                            </div>
 
                             {/* Row 2 */}
-                            <img
-                                src={step3}
-                                alt="Step Inside Infinity 3"
-                                className="w-[124px] h-[118px] md:w-[327px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover"
-                            />
-                            <img
-                                src={step4}
-                                alt="Step Inside Infinity 4"
-                                className="w-[221px] h-[118px] md:w-[580px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover"
-                            />
+                            <div className="flex gap-2 md:gap-6">
+                                <img
+                                    src={step3}
+                                    alt="Step Inside Infinity 3"
+                                    className="w-[124px] h-[118px] md:w-[327px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover flex-shrink-0"
+                                />
+                                <img
+                                    src={step4}
+                                    alt="Step Inside Infinity 4"
+                                    className="w-[221px] h-[118px] md:w-[580px] md:h-[333px] rounded-[10px] md:rounded-[20px] object-cover flex-shrink-0"
+                                />
+                            </div>
                         </div>
 
                         {/* Mobile Button - Only visible on mobile, below images */}
