@@ -29,9 +29,9 @@ const Footer = () => {
                     </div>
 
                     {/* Links Section - Right side, aligned with description */}
-                    <div className="flex flex-wrap gap-8 md:gap-6 md:mt-[70px] md:flex-nowrap">
+                    <div className="flex flex-nowrap justify-between gap-4 md:gap-6 md:mt-[70px]">
                         {/* Quick Links */}
-                        <div className="order-1">
+                        <div className="order-1 flex-shrink-0">
                             <h3 className="text-[14px] md:text-[18px] font-bold text-[#2D3542] mb-4">
                                 Quick Links
                             </h3>
@@ -60,7 +60,7 @@ const Footer = () => {
                         </div>
 
                         {/* Terms & Conditions */}
-                        <div className="order-2">
+                        <div className="order-2 flex-shrink-0">
                             <h3 className="text-[14px] md:text-[18px] font-bold text-[#2D3542] mb-4">
                                 Terms Conditions
                             </h3>
@@ -79,7 +79,7 @@ const Footer = () => {
                         </div>
 
                         {/* Contact Us */}
-                        <div className="order-3">
+                        <div className="order-3 flex-shrink-0">
                             <h3 className="text-[14px] md:text-[18px] font-bold text-[#2D3542] mb-4">
                                 Contact Us
                             </h3>
@@ -98,7 +98,7 @@ const Footer = () => {
                         </div>
 
                         {/* Subscribe - Mobile: Below links, Desktop: Same row */}
-                        <div className="order-4 w-full md:w-auto">
+                        <div className="order-4 w-full md:w-auto hidden md:block">
                             <h3 className="text-[16px] md:text-[18px] font-bold text-[#2D3542] mb-4">
                                 Subscribe
                             </h3>
@@ -119,20 +119,39 @@ const Footer = () => {
                             </form>
                         </div>
                     </div>
+
+                    {/* Subscribe + Social Icons Row - Mobile only */}
+                    <div className="flex items-center gap-3 md:hidden">
+                        <form onSubmit={handleSubscribe} className="relative inline-block flex-1 max-w-[200px]">
+                            <input
+                                type="email"
+                                placeholder="E mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="w-full h-[32px] pl-3 pr-[50px] rounded-[10px] border border-[#00A8E8] bg-white text-[12px] focus:outline-none focus:border-[#0096d1]"
+                            />
+                            <button
+                                type="submit"
+                                className="absolute right-[3px] top-[50%] translate-y-[-50%] w-[42px] h-[24px] bg-[#00A8E8] text-white rounded-[4px] text-[10px] font-400 hover:bg-[#0096d1] transition-colors"
+                            >
+                                Sent
+                            </button>
+                        </form>
+                        <div className="flex gap-2">
+                            <a href="https://www.instagram.com/sumooo.d/" target="_blank" rel="noopener noreferrer" className="w-[24px] h-[24px] flex items-center justify-center">
+                                <img src={instaIcon} alt="Instagram" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#linkedin" className="w-[24px] h-[24px] flex items-center justify-center">
+                                <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#facebook" className="w-[24px] h-[24px] flex items-center justify-center">
+                                <img src={facebookIcon} alt="Facebook" className="w-full h-full object-contain" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Social Icons - Mobile only */}
-                <div className="flex gap-4 mb-6 md:hidden">
-                    <a href="#instagram" className="w-[28px] h-[28px] md:w-[28px] md:h-[28px] flex items-center justify-center hover:bg-[#00A8E8] transition-colors">
-                        <img src={instaIcon} alt="Instagram" className="w-full h-full object-contain" />
-                    </a>
-                    <a href="#linkedin" className="w-[28px] h-[28px] md:w-[28px] md:h-[28px] flex items-center justify-center hover:bg-[#00A8E8] transition-colors">
-                        <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full object-contain" />
-                    </a>
-                    <a href="#facebook" className="w-[28px] h-[28px] md:w-[28px] md:h-[28px] flex items-center justify-center hover:bg-[#00A8E8] transition-colors">
-                        <img src={facebookIcon} alt="Facebook" className="w-full h-full object-contain" />
-                    </a>
-                </div>
+
 
                 {/* Copyright */}
                 <div className="border-t border-[#2D3542]/20 pt-6">
