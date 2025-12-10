@@ -14,7 +14,6 @@ function ContactUsPage() {
             <Hero />
             <ContactForm />
             <Maps />
-            <ContactUs />
             <Footer />
         </>
     )

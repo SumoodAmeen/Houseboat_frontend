@@ -11,10 +11,10 @@ const ContactForm = () => {
                 <div className="w-full md:w-1/2 flex flex-col">
                     {/* Text Content */}
                     <div className="mb-[40px]">
-                        <h2 className="font-glitten text-[32px] md:text-[48px] text-[#0E1727] font-normal mb-4 leading-tight">
+                        <h2 className="font-glitten text-[32px] md:text-[48px] text-[#0E1727] font-normal mb-4 leading-tight text-center md:text-left">
                             We Would Like To Hear From You
                         </h2>
-                        <p className="text-[14px] md:text-[16px] text-[#2D3542] font-normal leading-[1.6]">
+                        <p className="text-[14px] md:text-[16px] text-[#2D3542] font-normal leading-[1.6] text-center md:text-left">
                             Lorem ipsum dolor sit amet consectetur. Imperdiet volutpat convallis dis ipsum proin
                         </p>
                     </div>
@@ -41,26 +41,26 @@ const ContactForm = () => {
 
                 {/* Right Side (Desktop) / Middle (Mobile) - Form */}
                 <div className="w-full md:w-1/2">
-                    <div className="bg-[#F4F4F4] rounded-[20px] p-[30px] md:p-[50px]">
+                    <div className="bg-[#F2F2F2] rounded-[20px] p-[30px] md:p-[50px] shadow-[0_8px_18px_rgba(0,159,224,0.15)]">
                         <form className="flex flex-col gap-4">
                             <input
                                 type="text"
                                 placeholder="Full Name"
-                                className="w-full h-[50px] bg-transparent border border-[#D9D9D9] rounded-[10px] px-4 text-[14px] outline-none focus:border-[#009FE0]"
+                                className="w-full h-[50px] bg-white border border-[#009FE0]/50 rounded-[10px] px-4 text-[14px] outline-none focus:border-[#0096d1]"
                             />
                             <input
                                 type="email"
                                 placeholder="E mail"
-                                className="w-full h-[50px] bg-transparent border border-[#D9D9D9] rounded-[10px] px-4 text-[14px] outline-none focus:border-[#009FE0]"
+                                className="w-full h-[50px] bg-white border border-[#009FE0]/50 rounded-[10px] px-4 text-[14px] outline-none focus:border-[#0096d1]"
                             />
                             <input
                                 type="tel"
                                 placeholder="Phone Number"
-                                className="w-full h-[50px] bg-transparent border border-[#D9D9D9] rounded-[10px] px-4 text-[14px] outline-none focus:border-[#009FE0]"
+                                className="w-full h-[50px] bg-white border border-[#009FE0]/50 rounded-[10px] px-4 text-[14px] outline-none focus:border-[#0096d1]"
                             />
                             <textarea
                                 placeholder="Message"
-                                className="w-full h-[150px] bg-transparent border border-[#D9D9D9] rounded-[10px] p-4 text-[14px] outline-none resize-none focus:border-[#009FE0]"
+                                className="w-full h-[150px] bg-white border border-[#009FE0]/50 rounded-[10px] p-4 text-[14px] outline-none resize-none focus:border-[#0096d1]"
                             ></textarea>
 
                             <button
