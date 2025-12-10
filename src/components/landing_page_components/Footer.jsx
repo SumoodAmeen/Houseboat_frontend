@@ -15,7 +15,7 @@ const Footer = () => {
 
     return (
         <footer className="w-full bg-[#C1EDFF] py-8 md:py-12">
-            <div className="max-w-[1440px] mx-auto px-4 md:pl-[50px] md:pr-[50px]">
+            <div className="max-w-full mx-auto px-4 md:pl-[50px] md:pr-[50px]">
                 {/* Main Footer Content */}
                 <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
                     {/* Logo and Description */}

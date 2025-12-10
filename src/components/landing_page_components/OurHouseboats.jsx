@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import boat1 from '../../assets/landing/boat1.webp';
 import boat2 from '../../assets/landing/boat2.webp';
 import boat3 from '../../assets/landing/boat3.png';
 
 const OurHouseboats = () => {
+    const navigate = useNavigate();
     const houseboats = [
         {
             id: 1,
@@ -55,10 +57,16 @@ const OurHouseboats = () => {
                                     {boat.description}
                                 </p>
                                 <div className="flex gap-3">
-                                    <button className="flex-1 h-[35px] border-2 border-[#009FE0] text-[#009FE0] rounded-[10px] text-[14px] font-400 hover:bg-[#009FE0] hover:text-white transition-colors duration-300">
+                                    <button
+                                        onClick={() => navigate('/contact-us')}
+                                        className="flex-1 h-[35px] border-2 border-[#009FE0] text-[#009FE0] rounded-[10px] text-[14px] font-400 hover:bg-[#009FE0] hover:text-white transition-colors duration-300"
+                                    >
                                         Enquire
                                     </button>
-                                    <button className="flex-1 h-[35px] bg-[#009FE0] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
+                                    <button
+                                        onClick={() => navigate(`/details/${boat.id}`)}
+                                        className="flex-1 h-[35px] bg-[#009FE0] text-white rounded-[10px] text-[14px] font-400 hover:bg-[#0088c2] transition-colors duration-300"
+                                    >
                                         Book Now
                                     </button>
                                 </div>
@@ -84,10 +92,16 @@ const OurHouseboats = () => {
                                     {boat.description}
                                 </p>
                                 <div className="flex gap-3">
-                                    <button className="w-[190px] h-[43px] border-2 border-[#009FE0] text-[#009FE0] rounded-[10px] text-[18px] font-400 hover:bg-[#009FE0] hover:text-white transition-colors duration-300">
+                                    <button
+                                        onClick={() => navigate('/contact-us')}
+                                        className="w-[190px] h-[43px] border-2 border-[#009FE0] text-[#009FE0] rounded-[10px] text-[18px] font-400 hover:bg-[#009FE0] hover:text-white transition-colors duration-300"
+                                    >
                                         Enquire
                                     </button>
-                                    <button className="w-[190px] h-[43px] bg-[#009FE0] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0088c2] transition-colors duration-300">
+                                    <button
+                                        onClick={() => navigate(`/details/${boat.id}`)}
+                                        className="w-[190px] h-[43px] bg-[#009FE0] text-white rounded-[10px] text-[18px] font-400 hover:bg-[#0088c2] transition-colors duration-300"
+                                    >
                                         Book Now
                                     </button>
                                 </div>
