@@ -15,11 +15,11 @@ const Footer = () => {
 
     return (
         <footer className="w-full bg-[#C1EDFF] py-8 md:py-12">
-            <div className="max-w-full mx-auto px-4 md:pl-[50px] md:pr-[50px]">
+            <div className="max-w-full mx-auto px-4 md:px-[50px]">
                 {/* Main Footer Content */}
                 <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
                     {/* Logo and Description */}
-                    <div className="md:max-w-[379px]">
+                    <div className="md:max-w-[400px] md:flex-shrink-0">
                         <h2 className="font-glitten text-[20px] md:text-[50px] font-400 text-[#2D3542] mb-4">
                             Infinity
                         </h2>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </div>
 
                     {/* Links Section - Right side, aligned with description */}
-                    <div className="flex flex-nowrap justify-between gap-4 md:gap-6 md:mt-[70px]">
+                    <div className="flex flex-nowrap justify-between md:justify-end gap-4 md:gap-[150px] md:mt-[70px]">
                         {/* Quick Links */}
                         <div className="order-1 flex-shrink-0">
                             <h3 className="text-[14px] md:text-[18px] font-bold text-[#2D3542] mb-4">
@@ -155,9 +155,23 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <div className="border-t border-[#2D3542]/20 pt-6">
-                    <p className="text-[12px] md:text-[14px] font-400 text-[#2D3542] text-center">
-                        © 2025 Axinor Technologies. All rights reserved.
-                    </p>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        {/* Social Icons - Desktop only */}
+                        <div className="hidden md:flex gap-4 mb-4 md:mb-0">
+                            <a href="https://www.instagram.com/sumooo.d/" target="_blank" rel="noopener noreferrer" className="w-[28px] h-[28px] flex items-center justify-center">
+                                <img src={instaIcon} alt="Instagram" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#linkedin" className="w-[28px] h-[28px] flex items-center justify-center">
+                                <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full object-contain" />
+                            </a>
+                            <a href="#facebook" className="w-[28px] h-[28px] flex items-center justify-center">
+                                <img src={facebookIcon} alt="Facebook" className="w-full h-full object-contain" />
+                            </a>
+                        </div>
+                        <p className="text-[12px] md:text-[14px] font-400 text-[#2D3542] text-center md:text-right md:flex-1">
+                            © 2025 Axinor Technologies. All rights reserved.
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>

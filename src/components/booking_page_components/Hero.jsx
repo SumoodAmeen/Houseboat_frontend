@@ -13,7 +13,7 @@ const Hero = () => {
             {/* Content */}
             <div className="relative h-full flex items-center px-4 md:px-[30px]">
                 <div className="max-w-[1750px] mx-auto w-full">
-                    <h1 className="font-glitten text-[33px] md:text-[80px] md:pt-0 pt-85 font-400 text-white leading-tight">
+                    <h1 className="font-glitten text-[33px] md:text-[80px] md:pt-0 pt-40 font-400 text-white leading-tight">
                         Comfort & Luxury<br />
                         Book Your Perfect Stay
                     </h1>
